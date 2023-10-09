@@ -1,14 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aplikasi Absensi</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Aplikasi Absensi</h1>
-    <input type="text" id="employeeId" placeholder="Masukkan ID (5 karakter)" />
-    <button id="submitButton">Absen</button>
-    <p id="resultMessage"></p>
+    <div class="absensi">
+      <div class="container">
+        <h1>Aplikasi Absensi</h1>
+        <hr />
+
+        <div class="input-box">
+          <input type="text" id="employeeId" placeholder="Masukkan ID Anda" />
+          <button id="submitBtn">Absen</button>
+          <div id="validationMessage"></div>
+        </div>
+        <div class="data-box">
+          <table id="absensiTable">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>ID</th>
+                <th>Tanggal</th>
+              </tr>
+            </thead>
+            <tbody id="absensiList"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
